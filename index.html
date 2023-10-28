@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>SGPA Calculator for VTU First Year (2022 Scheme)</title>
+    <meta name="description" content=" VTU SCGPA calculator for the 2022 Scheme 2nd semister">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../vtu-logo.png">
+
+    <script>
+
+        function calculate() {
+
+            var a = parseInt(document.getElementById("mat").value);
+            var b = parseInt(document.getElementById("phy").value);
+            var c = parseInt(document.getElementById("pop").value);
+            var d = parseInt(document.getElementById("esc").value);
+            var e = parseInt(document.getElementById("etc").value);
+            var f = parseInt(document.getElementById("eng").value);
+            var g = parseInt(document.getElementById("kak").value);
+            var h = parseInt(document.getElementById("idt").value);
+
+
+            var aa = 4 * marks(a);
+            var ab = 4 * marks(b);
+            var ac = 3 * marks(c);
+            var ad = 3 * marks(d);
+            var ae = 3 * marks(e);
+            var af = 1 * marks(f);
+            var ag = 1 * marks(g);
+            var ah = 1 * marks(h);
+
+
+            var z = ((aa + ab + ac + ad + ae + af + ag + ah) / 200) * 10;
+
+
+            document.getElementById("res").value = parseFloat(z);
+        }
+
+        function marks(y) {
+            if (y >= 90)
+                return 10;
+            else if (y <= 89 && y >= 80)
+                return 9;
+            else if (y <= 79 && y >= 70)
+                return 8;
+            else if (y <= 69 && y >= 60)
+                return 7;
+            else if (y <= 59 && y >= 55)
+                return 6;
+            else if (y <= 54 && y >= 50)
+                return 5;
+            else if (y <= 49 && y >= 40)
+                return 4;
+            else
+                return 0;
+
+        }
+
+
+
+    </script>
+
+    <style>
+        #calc {
+            background-color: rgb(96, 74, 255);
+            padding: 0.5% 2% 0.5% 2%;
+            font-size: 100%;
+        }
+
+        label {
+
+            color: rgb(0, 0, 0);
+            margin-top: 5%;
+            font-weight: bold;
+        }
+
+        input {
+            background-color: rgb(255, 255, 255);
+            margin: 1% 0 2% 0;
+            font-weight:;
+            text-align: center;
+            font-size: 100%;
+        }
+
+        <a href="https://iradesign.io">Illustrations by IRA Design</a>#res {
+            font-size: 200%;
+            width: 150px;
+            background-color: rgb(217, 237, 198);
+            color: rgba(1, 1, 255, 0.666);
+        }
+
+        #h {
+            color: rgb(93, 69, 226);
+            font-size: x-large;
+            margin-bottom: 7%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+    </style>
+
+
+</head>
+
+<body id="bd">
+
+   
+    
+    <article class="menu">
+        
+            <a href="./about/index.html" style="color: rgb(234, 234, 239);">About</a>
+  
+      
+
+    </article>
+<style>
+        .menu{
+            padding: 20;
+            float: left;
+            color: rgba(163, 9, 9, 0.801);
+            
+        }
+    </style> 
+ 
+        
+               
+    <center>
+
+        <header class="head">
+            <h1 class="head">SCGPA Calculator Vtu 2<sup>nd</sup> Semester</h1>(<em class="head">2022 Scheme</em> )
+        </header>
+        <style>
+            .head {
+                background-color: rgb(125, 102, 242);
+                text-align: center;
+
+                padding: 2px;
+                color: white;
+                font-size: 30px;
+            }
+        </style>
+
+        <br>
+        <br><b id="h">Enter Total Marks of Each Subject</b>
+       <main id="list">
+        <br>
+        <br>
+        <label class="sub">BMATX*01 : </label>
+        <br>
+        <input type="text" id="mat" placeholder="Enter the marks">
+        <br>
+        <label class="sub">BPHYX*02/BCHEX*02 : </label>
+        <br>
+        <input type="text" id="phy" placeholder="Enter the marks">
+        <br>
+        <label class="sub">BPOPS*03/BCEDK*03/BEMEM*03/BCIVC*03/BBEE*03/BEEE*03 : </label>
+        <br>
+        <input type="text" id="pop" placeholder="Enter the marks">
+        <br>
+        <label class="sub">BESCK*04X : </label>
+        <br>
+        <input type="text" id="esc" placeholder="Enter the marks">
+
+        <br>
+        <label class="sub">BETCK*05X/BPLCK*05X : </label>
+        <br>
+        <input type="text" id="etc" placeholder="Enter the marks">
+
+        <br>
+        <label class="sub">BENGK*06/BPWSK*06: </label>
+        <br>
+        <input type="text" id="eng" placeholder="Enter the marks">
+        <br>
+        <label class="sub">BKXKK*07/BICOK*07 : </label>
+        <br>
+        <input type="text" id="kak" placeholder="Enter the marks">
+
+        <br>
+        <label class="sub">BIDTK*58/BSFHK*58 : </label>
+        <br>
+        <input type="text" id="idt" placeholder="Enter the marks">
+
+        <br>
+
+
+
+
+       </main>
+       <style>
+       #list{
+            color: rgb(93, 93, 240);
+            -moz-text-decoration-color: ;
+        
+        }
+        .sub{
+            color: rgb(70, 70, 252);
+        }
+       </style>
+        
+        <input type="button" value="calculate" id="calc" onclick="calculate()">
+
+        <p style="color:rgb(74, 82, 229); font-size:large"><strong>Your CGPA/SGPA is</strong></p>
+        
+        <input type="text" id="res" disabled="" placeholder="Results">
+
+    </center>
+    <br>
+    
+        <p>
+          
+            <a href="https://github.com/AjitAdin" target="_blank">GitHub</a> |
+            <a href="https://x.com/Ajit_s_Adin?t=JXirlVC5FiKWSS3mqfpcqw&s=09" target="_blank">Twitter</a>
+        </p>
+      <a href="mailto:ajitadin03@gmail.com">contact</a>
+    <footer>
+        <p>&copy; 2023 copyright....... 
+
+
+
+</body>
+
+</html> 
