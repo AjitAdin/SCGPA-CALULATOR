@@ -1,0 +1,12 @@
+body{
+    background-image: url(../back\ i.png);
+    backface-visibility: hidden;
+}
+
+    header {
+        background-color: #edeef1;
+        color: #fff;
+        padding: 10px;
+    }
+
+    
